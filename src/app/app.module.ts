@@ -7,11 +7,20 @@ import { HelloComponent } from './hello.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { BheaviourSubService } from './bheaviour-sub.service';
+import { HttpClientModule } from '@angular/common/http';
+import { ForkJoinComponent } from './fork-join/fork-join.component';
+import { AppRoutingModule } from './app-routing/app-routing.module';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, ParentComponent, ChildComponent ],
+  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
+  declarations: [
+    AppComponent,
+    HelloComponent,
+    ParentComponent,
+    ChildComponent,
+    ForkJoinComponent,
+  ],
   providers: [BheaviourSubService],
-  bootstrap:    [ AppComponent ]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
