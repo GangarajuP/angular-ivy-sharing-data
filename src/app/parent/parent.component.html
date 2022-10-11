@@ -1,0 +1,9 @@
+<app-child
+  (snedMessage)="recvfromChild($event)"
+  [childMessag]="parentMessage"
+></app-child>
+<br />
+<h1>{{ fromChild }}</h1>
+<input type="text" [(ngModel)]="newUser">
+<button (click)="editUser(newUser)">Change</button>
+<h1>from Bhevaiour Subject: {{user}}</h1>
